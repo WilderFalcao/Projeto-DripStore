@@ -1,0 +1,7 @@
+import Header from "../Header/Header.jsx";
+
+export default function Header() {
+    return (
+        <header/> 
+    )
+}   
