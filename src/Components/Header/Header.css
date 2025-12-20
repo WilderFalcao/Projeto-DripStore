@@ -1,12 +1,15 @@
-nav {
+header {
   background-image: url(https://scontent.ffor15-1.fna.fbcdn.net/v/t39.30808-1/285262909_166322979190368_7051054194111188546_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=BOmRMn8m7_AQ7kNvwFStpVK&_nc_oc=AdmFxhhAgGAZOUkGoNUHdB9B4wVG51GYRCT73yYA1DvutyY3sq9aVZDQwxorXeeOOvTFdr2cdGSLeiQiUqdzipvJ&_nc_zt=24&_nc_ht=scontent.ffor15-1.fna&_nc_gid=VmxOphp4rUicgbfZxcKKVA&oh=00_AfnUIvHqqQ8TJ4288KgLscQG1tIS-e29WsJndEJNITQpfw&oe=694CE29A);
-  height: 10vh;
+  height: 4vh;
+  background-size: 4vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 10%;
   position: absolute;
+  margin: 2px;  
   width: 100%;
-  left: 0;
 }
+
+
 
 
 

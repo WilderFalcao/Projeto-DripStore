@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import LoginScreen from "./Pages/loginScreen.jsx";
+import Login from "./Pages/Login.jsx";
+
 
 export default function AppRoutes() {
     return (
             <Routes>
-                <Route path="/loginScreen" element={<LoginScreen />} />
+                <Route path="/Login" element={<Login />} />
             </Routes>
     )
 }

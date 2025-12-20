@@ -1,4 +1,4 @@
-import Header from "../Header/Header.jsx";
+import "./header.css";
 
 export default function Header() {
     return (
