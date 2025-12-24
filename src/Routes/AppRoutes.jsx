@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./Pages/Login.jsx";
+import Home from "../Pages/Home.jsx";
 
 
 export default function AppRoutes() {
     return (
             <Routes>
-                <Route path="/Login" element={<Login />} />
+                <Route path="/" element={<Home />} />
             </Routes>
     )
 }
