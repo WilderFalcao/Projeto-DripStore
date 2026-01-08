@@ -1,0 +1,249 @@
+nav {
+  background-color: var(--creme);
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 2rem;
+  height: 180px;
+
+  /* Container principal */
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+
+    /* Div do logo */
+    .DS-logo {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      img {
+        object-fit: contain;
+        order: 1;
+        margin: 1.5rem;
+      }
+      
+      .Drip {
+        order: 2;
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          color: var(--rosa);
+          font-family: sans-serif;
+        }
+      }
+    }
+    
+    /* Barra de pesquisa */
+    .nav-search {
+      flex: 1;
+      position: relative;
+      input {
+        width: 100%;
+        padding: 0.75rem 3rem 0.75rem 1rem;
+        background-color: #cfc9c9;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-family: sans-serif;
+        color: var(--preto);
+        outline: none;
+        transition: background-color 0.3s ease;
+        &: :placeholder {
+          color: var(--preto);
+        }
+        
+        &:focus {
+          background-color: #d7d7d7;
+        }
+      }
+      
+      .search-icon {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 19px;
+        height: 19px;
+        pointer-events: none;
+      }
+    }
+    
+    /* Ações do nav (cadastre-se, entrar, carrinho) */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .cadastre-se {
+        text-decoration: none;
+        color: var(--preto);
+        font-size: 0.95rem;
+        font-weight: 500;
+        font-family: sans-serif;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--rosa);
+          transition: width 0.3s ease;
+        }
+        
+        &:hover {
+          color: var(--rosa);
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+      
+      .btn-entrar {
+        background-color: var(--rosa);
+        color: var(--creme);
+        border: none;
+        padding: 0.65rem 2.5rem;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        font-family: sans-serif;
+        cursor: pointer;
+      }
+      
+      .cart-icon {
+        width: 19px;
+        height: 19px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  
+  /* Lista de navegação */
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin: 1.5rem;
+    /* Itens da lista */
+    li {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      /* Links do menu */
+      a {
+        text-decoration: none;
+        color: var(--preto);
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: sans-serif;
+        padding: 0.5rem 0;
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s ease;
+        /* Sublinhado animado */
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: var(--rosa);
+          transition: width 0.3s ease;
+        }
+        
+        /* Efeito hover */
+        &:hover {
+          color: var(--rosa);
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Responsividade - Tablet */
+  @media (max-width:1024px) {
+    padding: 1rem 1.5rem;
+    
+    .nav-container {
+      flex-wrap: wrap;
+      gap: 1rem;
+      .nav-search {
+        order: 3;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    
+    ul {
+      gap: 2rem;
+      li a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  /* Responsividade - Mobile */
+  @media (max-width:768px) {
+    padding: 1rem;
+    
+    .nav-container {
+      .DS-logo {
+        .Drip h1 {
+          font-size: 1.5rem;
+        }
+      }
+      
+      .nav-actions {
+        gap: 1rem;
+        .cadastre-se {
+          font-size: 0.85rem;
+        }
+        
+        .btn-entrar {
+          padding: 0.5rem 1.5rem;
+          font-size: 0.85rem;
+        }
+      }
+    }
+    
+    ul {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      li a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  
+  /* Responsividade - Mobile pequeno */
+  @media (max-width:480px) {
+    ul {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      li {
+        width: 100%;
+        a {
+          width: 100%;
+          padding: 0.75rem 0;
+        }
+      }
+    }
+  }
+}
